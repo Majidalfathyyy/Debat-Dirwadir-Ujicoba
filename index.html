@@ -64,20 +64,20 @@
         ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
-<body class="text-gray-800 antialiased pb-20 md:pb-0 overflow-x-hidden">
+<body class="text-gray-800 antialiased overflow-x-hidden min-h-screen flex flex-col">
 
     <!-- ================= HEADER ================= -->
     <header class="bg-white sticky top-0 z-40 border-b border-gray-100 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo & Branding -->
+                <!-- Logo & Branding (Teks tetap tampil rapi di mobile) -->
                 <div class="flex items-center gap-3 cursor-pointer group" onclick="showPage('home-page')">
                     <div class="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden transform transition duration-300 group-hover:scale-110 group-hover:rotate-3">
                         <img src="img/logoCMC.png" alt="Logo Organisasi" class="w-full h-full object-contain">
                     </div>
-                    <div class="hidden sm:block transform transition duration-300 group-hover:translate-x-1">
+                    <div class="transform transition duration-300 group-hover:translate-x-1">
                         <h1 class="text-xs font-bold text-navy leading-tight uppercase">Pemilihan Direktur & Wadir</h1>
-                        <p class="text-[10px] text-gray-500 font-medium">Periode 2026-2028</p>
+                        <p class="text-[10px] text-gray-500 font-medium">Periode 2026-2028 CMC Polines</p>
                     </div>
                 </div>
 
@@ -90,30 +90,18 @@
                     <button onclick="showPage('faq-page')" class="nav-link hover:text-navy transition transform hover:scale-105">FAQ</button>
                 </nav>
 
-                <!-- Desktop Right Actions -->
-                <div class="hidden md:flex items-center gap-4">
-                    <div class="relative group">
-                        <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm transition group-hover:text-navy"></i>
-                        <input type="text" placeholder="Cari Calon" class="pl-9 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent w-48 transition-all duration-300 hover:border-navy">
-                    </div>
-                    <a href="login.php" class="bg-accentRed hover:bg-red-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:scale-95 inline-block">
+                <!-- Header Right Action -->
+                <div class="flex items-center gap-3">
+                    <a href="login.php" class="bg-accentRed hover:bg-red-700 text-white text-xs sm:text-sm font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:scale-95 inline-block">
                         Voting Sekarang
                     </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <a href="login.php" class="text-accentRed font-semibold text-sm mr-4 transition transform hover:scale-105">Voting</a>
-                    <button class="text-gray-600 hover:text-navy focus:outline-none transition transform hover:rotate-90 duration-300">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- ================= MAIN CONTENT ================= -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 min-h-[calc(100vh-160px)]">
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 pb-24 md:pb-12 w-full">
         
         <!-- ====== HOME PAGE ====== -->
         <section id="home-page" class="page-section fade-in block">
@@ -134,40 +122,26 @@
                         </button>
                     </div>
                 </div>
-               <div class="w-full lg:w-1/2 -mx-4 sm:-mx-6 md:mx-0">
-    <!-- Wadah Gambar diperlebar maksimal dengan aspect ratio lanskap luas -->
-    <div class="w-full aspect-[16/7.5] sm:aspect-[16/8] relative float-anim sm:rounded-2xl overflow-hidden shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1)]">
-        
-        <!-- Gambar Latar / Organisasi -->
-        <img src="img/cmcPolines.png" alt="Ilustrasi Organisasi" class="w-full h-full object-cover object-center">
-        
-        <!-- Efek overlay transparan -->
-        <div class="absolute inset-0 bg-navy/10 transition duration-500 hover:bg-navy/0 pointer-events-none"></div>
-        
-    </div>
-</div>
-            </div>
+                <div class="w-full lg:w-1/2 -mx-4 sm:-mx-6 md:mx-0">
+                    <div class="w-full aspect-[16/7.5] sm:aspect-[16/8] relative float-anim sm:rounded-2xl overflow-hidden shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1)]">
+                        <img src="img/cmcPolines.png" alt="Ilustrasi Organisasi" class="w-full h-full object-cover object-center">
+                        <div class="absolute inset-0 bg-navy/10 transition duration-500 hover:bg-navy/0 pointer-events-none"></div>
+                    </div>
+                </div>
             </div>
 
-            <!-- ================= BANNER PARTNER/SPONSOR YANG DIPERBARUI ================= -->
+            <!-- BANNER SPONSOR -->
             <div class="w-full mb-16 slide-up delay-400">
-                <!-- Header Sponsor -->
                 <div class="flex items-center justify-center mb-6">
                     <div class="h-px bg-gray-300 flex-1 max-w-[100px] md:max-w-xs"></div>
                     <p class="text-center text-xs md:text-sm font-bold text-gray-500 uppercase tracking-widest mx-4">Didukung Oleh</p>
                     <div class="h-px bg-gray-300 flex-1 max-w-[100px] md:max-w-xs"></div>
                 </div>
                 
-                <!-- Kotak Putih Tempat Logo -->
                 <div class="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-sm border border-gray-100 flex justify-center items-center transition-all duration-300 hover:shadow-md group">
-                    <!-- 
-                        PASTIKAN FILE ANDA BERFORMAT .PNG JIKA INGIN TRANSPARAN 
-                        Efek grayscale akan membuat logo abu-abu, dan menyala saat di-hover 
-                    -->
-                    <img src="img/Semua Logo New .png" alt="Logo Mitra dan Sponsor" class="w-full h-auto object-contain max-h-12 md:max-h-20 lg:max-h-24  transition-all duration-500 cursor-pointer transform group-hover:scale-[1.02]">
+                    <img src="img/Semua Logo New .png" alt="Logo Mitra dan Sponsor" class="w-full h-auto object-contain max-h-12 md:max-h-20 lg:max-h-24 transition-all duration-500 cursor-pointer transform group-hover:scale-[1.02]">
                 </div>
             </div>
-            <!-- ================= /BANNER PARTNER/SPONSOR ================= -->
 
             <!-- Feature Cards -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -267,7 +241,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Step 1 to 4 with Hover Animations -->
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center relative transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
                     <div class="w-16 h-16 bg-navy text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-blue-50 transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-700 group-hover:border-blue-100">1</div>
                     <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-blue-700 transition">Login Akun</h3>
@@ -308,7 +281,6 @@
             </div>
 
             <div class="max-w-3xl mx-auto space-y-4">
-                <!-- FAQ Item 1 -->
                 <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
                     <button onclick="toggleFaq(1)" class="w-full text-left px-6 py-5 font-semibold text-navy flex justify-between items-center focus:outline-none hover:bg-blue-50 transition">
                         Apakah suara saya dijamin kerahasiaannya?
@@ -319,7 +291,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 2 -->
                 <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
                     <button onclick="toggleFaq(2)" class="w-full text-left px-6 py-5 font-semibold text-navy flex justify-between items-center focus:outline-none hover:bg-blue-50 transition">
                         Apakah saya bisa mengubah pilihan saya?
@@ -330,7 +301,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 3 -->
                 <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
                     <button onclick="toggleFaq(3)" class="w-full text-left px-6 py-5 font-semibold text-navy flex justify-between items-center focus:outline-none hover:bg-blue-50 transition">
                         Kapan batas akhir waktu voting?
@@ -341,7 +311,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ Item 4 -->
                 <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
                     <button onclick="toggleFaq(4)" class="w-full text-left px-6 py-5 font-semibold text-navy flex justify-between items-center focus:outline-none hover:bg-blue-50 transition">
                         Bagaimana jika saya lupa password akun saya?
@@ -356,21 +325,34 @@
 
     </main>
 
+    <!-- ================= FOOTER HALAMAN ================= -->
+    <footer class="bg-white border-t border-gray-200 py-6 text-center text-xs text-gray-600 font-medium mb-16 md:mb-0">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-1">
+            <p class="font-bold text-navy text-sm">Pemilihan Direktur & Wadir</p>
+            <p class="text-gray-500">Periode 2026-2028 CMC Polines</p>
+            <p class="text-[11px] text-gray-400 mt-1">&copy; 2026 All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <!-- ================= MOBILE BOTTOM NAVIGATION ================= -->
-    <nav class="md:hidden fixed bottom-0 w-full bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-40 transition-transform duration-300">
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-50">
         <div class="flex justify-around items-center h-16">
-            <button onclick="showPage('home-page')" class="mobile-nav-link flex flex-col items-center text-gray-400 hover:text-navy transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 w-full py-2">
+            <button onclick="showPage('home-page')" class="mobile-nav-link flex flex-col items-center text-gray-500 hover:text-navy transition-all duration-300 w-full py-2">
                 <i class="fa-solid fa-house text-lg mb-1"></i>
                 <span class="text-[10px] font-medium">Beranda</span>
             </button>
-            <button onclick="showPage('candidate-page')" class="mobile-nav-link flex flex-col items-center text-gray-400 hover:text-navy transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 w-full py-2">
+            <button onclick="showPage('candidate-page')" class="mobile-nav-link flex flex-col items-center text-gray-500 hover:text-navy transition-all duration-300 w-full py-2">
                 <i class="fa-solid fa-user-group text-lg mb-1"></i>
                 <span class="text-[10px] font-medium">Kandidat</span>
             </button>
-            <a href="login.php" class="mobile-nav-link flex flex-col items-center text-gray-400 hover:text-navy transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 w-full py-2">
-                <i class="fa-solid fa-check-to-slot text-lg mb-1"></i>
-                <span class="text-[10px] font-medium">Voting</span>
-            </a>
+            <button onclick="showPage('procedures-page')" class="mobile-nav-link flex flex-col items-center text-gray-500 hover:text-navy transition-all duration-300 w-full py-2">
+                <i class="fa-solid fa-clipboard-check text-lg mb-1"></i>
+                <span class="text-[10px] font-medium">Tata Cara</span>
+            </button>
+            <button onclick="showPage('faq-page')" class="mobile-nav-link flex flex-col items-center text-gray-500 hover:text-navy transition-all duration-300 w-full py-2">
+                <i class="fa-solid fa-circle-question text-lg mb-1"></i>
+                <span class="text-[10px] font-medium">FAQ</span>
+            </button>
         </div>
     </nav>
 
